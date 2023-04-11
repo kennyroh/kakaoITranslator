@@ -70,6 +70,20 @@ function createAppMenu() {
                 { role: 'quit', label: 'Quit' },
             ],
         },
+        {
+            label: 'Edit',
+            submenu: [
+                { role: 'undo' },
+                { role: 'redo' },
+                { type: 'separator' },
+                { role: 'cut' },
+                { role: 'copy' },
+                { role: 'paste' },
+                { role: 'delete' },
+                { type: 'separator' },
+                { role: 'selectAll' },
+            ],
+        },
         // ... other menu items
     ];
     const menu = electron_1.Menu.buildFromTemplate(template);
