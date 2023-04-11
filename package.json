@@ -1,0 +1,34 @@
+{
+  "name": "kakaoitranslator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "productName": "Kakao Translator Talk",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --windows"
+  },
+  "build": {
+    "appId": "io.github.kennyroh.kakaotranslatortalk",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "src/main/app-icon.icns"
+    },
+    "win": {
+      "icon": "src/main/app-icon.ico",
+      "target": "nsis"
+    },
+    "dmg": {
+      "sign": false
+    }
+  },
+  "author": "Kakao Corp.",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^23.6.0"
+  }
+}
